@@ -17,3 +17,6 @@ pokemonList.push({
     height: 1.7, 
     type: ["fire", "flying"]
 });
+
+for (let i = 0; i < pokemonList.length; i++) {
+    document.write("<p>" + pokemonList{i}.name + "(height: + pokemonList[i].height + ")</p>");
