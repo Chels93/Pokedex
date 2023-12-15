@@ -1,3 +1,5 @@
+//Pokemon height is in meters
+
 let pokemonList = [];
 
 pokemonList.push({
@@ -18,5 +20,12 @@ pokemonList.push({
     type: ["fire", "flying"]
 });
 
+// Loop through each Pokemon in the list
 for (let i = 0; i < pokemonList.length; i++) {
-    document.write("<p>" + pokemonList{i}.name + "(height: + pokemonList[i].height + ")</p>");
+    //Display for Pokemon name, height, and type
+    document.write("<p class='pokemon-container'>" + pokemonList[i].name + " (height: " + pokemonList[i].height + ")</p>")
+    
+    // If Pokemon is above 1 meter, add a special label 
+    if (pokemonList[i].height >1.0) 
+        document.write("<div class='big-label'> - Wow, that's big!</div>");
+}
