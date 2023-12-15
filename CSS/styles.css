@@ -1,1 +1,10 @@
+.pokemon-container {
+    display: flex;
+    align-items: center;
+}
 
+.big-label {
+    display: flex;
+    margin: 10px;
+    color: blue;
+}
