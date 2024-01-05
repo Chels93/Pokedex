@@ -20,7 +20,7 @@ pokemonList.push({
     type: ["fire", "flying"]
 });
 
-// Loop through each Pokemon in the list
+// for() loop through each Pokemon in the list
 for (let i = 0; i < pokemonList.length; i++) {
     //Display for Pokemon name, height, and type
     document.write("<p class='pokemon-container'>" + pokemonList[i].name + " (height: " + pokemonList[i].height + ")</p>")
@@ -29,3 +29,9 @@ for (let i = 0; i < pokemonList.length; i++) {
     if (pokemonList[i].height >1.0) 
         document.write("<div class='big-label'> - Wow, that's big!</div>");
 }
+
+//forEach() function to iterate through pokemonList
+pokemonList.forEach(function(pokemon) {
+    console.log(pokemonList.name + 'is' + pokemonList.height + 'meters tall.');
+}
+    
