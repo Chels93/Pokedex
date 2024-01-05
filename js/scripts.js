@@ -32,12 +32,13 @@
 pokemonList.forEach(function (pokemon) {
     console.log(pokemonList.name + 'is' + pokemonList.height + 'meters tall.');
 }
-
-    // pokemonList array wrapped in IIFE
-    (function () {
+                    
+// pokemonList array wrapped in IIFE
+// new variable to hold what IIFE will return 
+let pokemonRepository = (function () {
         let pokemonList = [];
 
-        pokemonList.push({
+         pokemonList.push({
             name: "Eevee",
             height: 0.3,
             type: ["normal"]
@@ -55,11 +56,6 @@ pokemonList.forEach(function (pokemon) {
             type: ["fire", "flying"]
         });
         console.log(pokemon);
-    }
-
-// new variable to hold what IIFE will return 
-let pokemonRepository = (function () {
-        let pokemonList = [];
 
         return {
             add: function (pokemon) {
@@ -70,7 +66,7 @@ let pokemonRepository = (function () {
             }
         };
 
-        // updated loop to reflect changes    
+        // updated loop to reflect public returns   
         pokemonRepository.getAll().forEach(function (pokemon) {
             pokemonRepository.addListItem(pokemon);
         });
