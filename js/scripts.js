@@ -1,41 +1,64 @@
 //pokemon height is in meters                
-let pokemonRepository = (function () {
-    
+var pokemonRepository = (function () {
+
   let pokemonList = [
     {
-        name: "Eevee",
-        height: 0.3,
-        type: ["normal"]
+      name: "Eevee",
+      height: 0.3,
+      type: ["normal"]
     },
     {
-        name: "Blastoise",
-        height: 1.6,
-        type: ["water"]
+      name: "Blastoise",
+      height: 1.6,
+      type: ["water"]
     },
     {
-        name: "Charizard",
-        height: 1.7,
-        type: ["fire", "flying"]
+      name: "Charizard",
+      height: 1.7,
+      type: ["fire", "flying"]
     }
   ]
 
-    function getAll () {
-      return pokemonList;
-    }
-    function add (pokemon) {
-        pokemonList.push(pokemon);
-    }
-  
-    return {
-        getAll: getAll,
-        add: add
-    }
-      
+  function add(pokemon) {
+    pokemonList.push(pokemon);
+  }
+
+  function getAll() {
+    return pokemonList;
+  }
+
+  function addListItem(pokemon) {
+    let pokemonList = document.querySelector(".pokemon-list");
+    let listpokemon = document.createElement("li");
+    let button = document.createElement("button");
+    button.innerText = pokemon.name;
+    button.classList.add("button-class");
+    listpokemon.appendChild(button);
+    pokemonList.appendChild(listpokemon);
+    button.addEventListener('click', function (event) {
+      console.log(event);
+    });
+  }
+
+  function showDetails(pokemon) {
+    console.log(pokemon);
+  }
+
+  return {
+    getAll: getAll,
+    add: add,
+    addListItem: addListItem,
+    showDetails: showDetails
+  }
+
 })()
 
 pokemonRepository.getAll().forEach(function (pokemon) {
-  document.write(pokemon.name + 'is' + pokemon.height + 'meters tall.');
+  pokemonRepository.addListItem(pokemon);
 });
+
+
+
   
 
    
