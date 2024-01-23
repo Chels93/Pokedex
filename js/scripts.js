@@ -28,7 +28,7 @@ let pokemonRepository = (function () {
 
   function loadDetails(item) {
     let url = item.detailsUrl;
-    return fetch(Url).then(function (response) {
+    return fetch(url).then(function (response) {
       return response.json();
     })
       .then(function (details) {
@@ -41,7 +41,7 @@ let pokemonRepository = (function () {
     });
   }
 
-  let modalContainer = document.querySelector('modal-container');
+  let modalContainer = document.querySelector('#modal-container');
   function showDetails(pokemon) {
     loadDetails(pokemon).then(function () {
       showModal(pokemon);
@@ -68,7 +68,7 @@ let pokemonRepository = (function () {
     nameElement.innerText = pokemon.name;
 
     let heightElement = document.createElement('p');
-    heightElement.innerText = 'Height: ${pokemon.height} meters';
+    heightElement.innerText = `Height: ${pokemon.height} meters`;
 
     // Create an <img> element
     let imageElement = document.createElement('img');
@@ -80,6 +80,7 @@ let pokemonRepository = (function () {
     modal.appendChild(nameElement);
     modal.appendChild(heightElement);
     modalContainer.appendChild(imageElement)
+    modalContent.appendChild(imageElement)
 
     // Append modal content to modal
     modal.appendChild(modalContent);
@@ -142,6 +143,9 @@ pokemonRepository.loadList().then(function () {
     pokemonRepository.addListItem(pokemon);
   });
 });
+
+
+
 
 
 
