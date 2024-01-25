@@ -57,12 +57,12 @@ let pokemonRepository = (function () {
     modal.classList.add('modal');
 
     let modalContent = document.createElement('div');
-    modal.classList.add('modal-content');
+    modalContent.classList.add('modal-content');
 
-    let closeButtonELement = document.createElement('button');
+    let closeButtonElement = document.createElement('button');
     closeButtonElement.classList.add('modal-close');
     closeButtonElement.innerText = 'Close';
-    closeButonElement.addEventListener('click', hideModal);
+    closeButtonElement.addEventListener('click', hideModal);
 
     let nameElement = document.createElement('h2');
     nameElement.innerText = pokemon.name;
@@ -143,6 +143,8 @@ pokemonRepository.loadList().then(function () {
     pokemonRepository.addListItem(pokemon);
   });
 });
+
+
 
 
 
