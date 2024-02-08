@@ -11,9 +11,17 @@
 </head>
 
 <body>
-  <ul class="pokemon-list"></ul>
-  <div id="modal-container"></div>
-  <div id="show-modal"></div>
+  <header>
+    <!--Navbar-->
+    <nav class="navbar navbar-light bg-light">
+      <span class="navbar-brand mb-0 h1">Pokedex</span>
+    </nav>
+
+    <!--List of Pokemon-->
+    <ul class="pokemon-list"></ul>
+    <div id="modal-container"></div>
+    <div id="show-modal"></div>
+  </header>
 
 
   <!-- Modal -->
@@ -22,7 +30,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel" data-target="modalTitle">Modal title</h5>
+          <h1 class="modal-title" id="exampleModalLabel" data-target="modalBody"></h1>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
