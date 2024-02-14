@@ -68,7 +68,6 @@ body  {
   right: 25%;
   height: 50%;
   position: absolute;
-  overflow: auto;
   overflow-y: auto;
 }
 
