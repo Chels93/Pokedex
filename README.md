@@ -1,6 +1,6 @@
 Pokédex JavaScript Application (simple-js-app):
 
-OVERVIEW
+OVERVIEW:
 - Browser-based JavaScript project that displays the first 150 Pokémon from the Pokémon universe 
 - It fetches data dynamically from the PokéAPI 
 - Demonstrates proficiency in JavaScript, HTML, CSS, and integration with external APIs, while maintaining clean code practices and an aesthetically pleasing user interface
@@ -23,7 +23,7 @@ BRWOSER COMPATIBLITY:
 - Microsoft Edge
 - Internet Explorer 11
 
-TECHNICAL STACK
+TECHNICAL STACK:
 - HTML5
 - CSS3
 - JavaScript (ES6)
