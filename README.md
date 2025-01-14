@@ -16,7 +16,7 @@ RUN APPLICATION:
 - The application runs directly in the browser, no additional setup is required
 - Github link: https://github.com/Chels93/simple-js-app.git
 
-BRWOSER COMPATIBLITY:
+BROWSER COMPATIBLITY:
 - Google Chrome
 - Mozilla Firefox
 - Safari
